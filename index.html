@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAI Strategic Dashboard v4.0.5</title>
+    <title>SAI Strategic Dashboard v4.0.8</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@700&display=swap');
         body { font-family: 'Inter', sans-serif; background: radial-gradient(circle at top right, #1e293b, #0f172a); margin: 0; }
-        .gauge-fill { fill: none; stroke: url(#gaugeGradient); stroke-width: 10; stroke-linecap: round; stroke-dasharray: 314; stroke-dashoffset: calc(314 - (314 * 54.2) / 100); transition: stroke-dashoffset 2s ease-out; }
+        .gauge-fill { fill: none; stroke: url(#gaugeGradient); stroke-width: 10; stroke-linecap: round; stroke-dasharray: 314; stroke-dashoffset: calc(314 - (314 * 53.7) / 100); transition: stroke-dashoffset 2s ease-out; }
         .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
     </style>
 </head>
@@ -20,14 +20,14 @@
         <div class="flex flex-col md:flex-row justify-between items-end border-b-2 border-slate-700 pb-8 gap-6">
             <div>
                 <div class="flex items-center gap-4 mb-3 justify-end text-left">
-                    <div class="w-4 h-4 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_15px_rgba(16,185,129,0.8)] text-left"></div>
+                    <div class="w-4 h-4 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_15px_rgba(16,185,129,0.8)]"></div>
                     <h1 class="text-4xl font-black tracking-tighter text-white uppercase italic">SAI STRATEGIC ANALYSIS</h1>
                 </div>
-                <p class="text-slate-400 text-xs font-bold tracking-widest uppercase opacity-80 font-mono italic">Deterministic Matrix v4.0.5 // Final Layout</p>
+                <p class="text-slate-400 text-xs font-bold tracking-widest uppercase opacity-80 font-mono italic text-left">Deterministic Matrix v4.0.8 // Comprehensive Build</p>
             </div>
             <div class="glass-card p-5 rounded-2xl text-left font-mono border-emerald-500/30">
-                <p class="text-xs text-slate-500 font-bold uppercase mb-2 italic">Ground Truth Confirmed</p>
-                <p class="text-2xl text-emerald-400 font-black tracking-tighter">FEB 27, 2026 // 22:50</p>
+                <p class="text-xs text-slate-500 font-bold uppercase mb-2 italic text-left">Night Final Sync</p>
+                <p class="text-2xl text-emerald-400 font-black tracking-tighter text-left">FEB 27, 2026 // 23:25</p>
             </div>
         </div>
 
@@ -46,7 +46,7 @@
                         <path class="gauge-fill" d="M10 65 A 50 50 0 0 1 110 65" />
                     </svg>
                     <div class="absolute inset-0 flex flex-col items-center justify-end pb-4 text-center">
-                        <span class="text-7xl font-black text-white tracking-tighter">54.2%</span>
+                        <span class="text-7xl font-black text-white tracking-tighter">53.7%</span>
                         <span class="text-xs font-bold text-slate-400 uppercase tracking-[0.4em] mt-2">SAI Probability Index</span>
                     </div>
                 </div>
@@ -59,40 +59,40 @@
                         <span class="text-sm font-black text-slate-200 uppercase tracking-wider">1. Logistics & Deployment</span>
                         <span class="text-lg font-bold text-blue-400">4.5 / 5.0</span>
                     </div>
-                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
                         <div class="bg-blue-500 h-full" style="width: 90%"></div>
                     </div>
                 </div>
 
-                <div class="glass-card p-5 rounded-2xl border-l-4 border-amber-500/30">
+                <div class="glass-card p-5 rounded-2xl">
                     <div class="flex justify-between items-center mb-3 font-mono">
                         <span class="text-sm font-black text-slate-200 uppercase tracking-wider">2. Hostile Intent & Comms</span>
                         <span class="text-lg font-bold text-amber-400">4.1 / 5.0</span>
                     </div>
-                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
                         <div class="bg-amber-500 h-full" style="width: 82%"></div>
                     </div>
                 </div>
 
-                <div class="glass-card p-5 rounded-2xl border-l-4 border-cyan-500/30">
+                <div class="glass-card p-5 rounded-2xl">
                     <div class="flex justify-between items-center mb-3 font-mono">
                         <span class="text-sm font-black text-slate-200 uppercase tracking-wider">3. Civilian Infrastructure</span>
-                        <span class="text-lg font-bold text-cyan-400">1.0 / 5.0</span>
+                        <span class="text-lg font-bold text-cyan-400">0.7 / 5.0</span>
                     </div>
-                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                        <div class="bg-cyan-400 h-full" style="width: 20%"></div>
+                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                        <div class="bg-cyan-400 h-full" style="width: 14%"></div>
                     </div>
                 </div>
 
                 <div class="bg-emerald-500/10 border border-emerald-500/30 p-5 rounded-2xl">
                     <div class="flex justify-between items-center mb-3 font-mono">
                         <span class="text-sm font-black text-emerald-400 uppercase tracking-wider">4. Stabilizing Brakes // בולמים</span>
-                        <span class="text-lg font-bold text-emerald-400">-1.2 Margin</span>
+                        <span class="text-lg font-bold text-emerald-400">-1.6 Margin</span>
                     </div>
-                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                        <div class="bg-emerald-500 h-full" style="width: 15%"></div>
+                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                        <div class="bg-emerald-500 h-full" style="width: 5%"></div>
                     </div>
-                    <p class="text-xs text-emerald-400/80 mt-2 font-bold italic">GPS נתניה תקין לחלוטין. יונייטד בתנועה להמראה (UA85).</p>
+                    <p class="text-xs text-emerald-400/80 mt-2 font-bold italic">Dual United Flights (UA85, UA141) In Operation. GPS Netanya: 100% Nominal.</p>
                 </div>
 
             </div>
@@ -100,27 +100,27 @@
 
         <div class="glass-card p-10 rounded-[3rem] border-r-8 border-emerald-500">
             <h3 class="text-xs font-black text-emerald-400 uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
-                <i data-lucide="brain" class="w-5 h-5"></i> Chain of Thought Analysis // 22:50
+                <i data-lucide="shield-check" class="w-5 h-5"></i> Final Briefing // 23:25
             </h3>
             <p class="text-slate-200 leading-relaxed text-right text-xl font-medium italic">
-                המדד ירד ל-<strong>54.2%</strong>. הרצה מלאה של 22 הפרמטרים מראה פער ברור: ההיערכות הלוגיסטית בחוץ הושלמה, אך בשטח ישראל (GPS ותעופה אזרחית) אין כל אינדיקציה לשיבוש או איום מיידי. **תנועת טיסת יונייטד (UA85)** לקראת המראה מחזקת את הערכת השגרה האזרחית במרכז הארץ.
+                המדד ירד ל-<strong>53.7%</strong>. רצף של שתי המראות של חברת יונייטד (לניו יורק ולשיקגו) מהווה אינדיקטור אסטרטגי חזק לשגרה אווירית. **אות ה-GPS בנתניה ובמרכז נותר תקין לחלוטין**, נתון המאשר את היציבות האלקטרונית בשטח. המודל מסכם את היום בדריכות יציבה מתחת לרף ההתראה.
             </p>
         </div>
 
         <div class="bg-white text-slate-950 p-10 rounded-[2.5rem] shadow-2xl" dir="ltr">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-xs font-bold uppercase text-left leading-relaxed">
                 <div class="space-y-4">
-                    <h4 class="text-sm font-black italic border-b-2 border-black pb-2 mb-4">LEGAL LIABILITY & TERMS</h4>
-                    <p>
-                        This dashboard provides conceptual data analysis only. Use of this information is at the <span class="bg-yellow-200 px-1 italic">SOLE RISK OF THE USER</span>. The operators of this matrix assume <span class="underline underline-offset-4 font-black">ZERO LEGAL LIABILITY</span> for any damages, actions, or consequences resulting from the interpretation of this score.
+                    <h4 class="text-sm font-black italic border-b-2 border-black pb-2 mb-4 text-left">LEGAL LIABILITY & TERMS</h4>
+                    <p class="text-left">
+                        This dashboard provides conceptual data analysis only. Use of this information is at the <span class="bg-yellow-200 px-1 font-black underline italic">SOLE RISK OF THE USER</span>. The operators and creators of this matrix assume <span class="underline underline-offset-4 font-black">ZERO LEGAL LIABILITY</span> for any damages, actions, or consequences resulting from the interpretation of this score.
                     </p>
                 </div>
                 <div class="space-y-4">
-                    <h4 class="text-sm font-black italic border-b-2 border-black pb-2 mb-4">EMERGENCY PROTOCOL</h4>
-                    <p>
+                    <h4 class="text-sm font-black italic border-b-2 border-black pb-2 mb-4 text-left">EMERGENCY PROTOCOL</h4>
+                    <p class="text-left">
                         This site is NOT an official alert system. In the event of an emergency, <span class="bg-yellow-200 px-1 text-red-600 font-black">FOLLOW ONLY HOME FRONT COMMAND (PIKUD HAOREF) INSTRUCTIONS</span>. Do not rely on this probability index for life-critical decisions.
                     </p>
-                    <p class="pt-6 text-[10px] font-black opacity-50 tracking-widest border-t border-slate-200">SAI MATRIX v4.0.5 // NO LIABILITY ASSUMED // FEB 2026</p>
+                    <p class="pt-6 text-[10px] font-black opacity-50 tracking-widest border-t border-slate-200 text-left">SAI MATRIX v4.0.8 // NO LIABILITY ASSUMED // FEB 2026</p>
                 </div>
             </div>
         </div>
