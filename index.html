@@ -3,113 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAI Strategic Dashboard v3.9.8</title>
+    <title>SAI Strategic Dashboard v3.9.9</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@700&display=swap');
-        body { font-family: 'Inter', sans-serif; background: radial-gradient(circle at top right, #1e293b, #0f172a); margin: 0; }
-        .gauge-fill { fill: none; stroke: url(#gaugeGradient); stroke-width: 10; stroke-linecap: round; stroke-dasharray: 314; stroke-dashoffset: calc(314 - (314 * 54.6) / 100); transition: stroke-dashoffset 2s ease-out; }
+        body { font-family: 'Inter', sans-serif; background: radial-gradient(circle at top right, #1e293b, #450a0a); margin: 0; }
+        .gauge-fill { fill: none; stroke: url(#gaugeGradient); stroke-width: 10; stroke-linecap: round; stroke-dasharray: 314; stroke-dashoffset: calc(314 - (314 * 55.1) / 100); transition: stroke-dashoffset 2s ease-out; }
         .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .pulse-warning { animation: pulse-border 2s infinite; }
-        @keyframes pulse-border { 0% { border-color: rgba(245, 158, 11, 0.1); } 50% { border-color: rgba(245, 158, 11, 0.5); } 100% { border-color: rgba(245, 158, 11, 0.1); } }
+        .pulse-critical { animation: pulse-red 1.5s infinite; }
+        @keyframes pulse-red { 0% { border-color: rgba(239, 68, 68, 0.2); } 50% { border-color: rgba(239, 68, 68, 0.8); } 100% { border-color: rgba(239, 68, 68, 0.2); } }
     </style>
 </head>
 <body class="text-slate-100 min-h-screen p-4 md:p-10 leading-relaxed">
     <div class="max-w-6xl mx-auto space-y-10">
-        <div class="flex flex-col md:flex-row justify-between items-end border-b-2 border-slate-700 pb-8 gap-6">
+        <div class="flex flex-col md:flex-row justify-between items-end border-b-2 border-red-900/50 pb-8 gap-6">
             <div class="text-right">
                 <div class="flex items-center gap-4 mb-3 justify-end">
-                    <div class="w-4 h-4 bg-amber-500 rounded-full animate-pulse shadow-[0_0_15px_rgba(245,158,11,0.8)]"></div>
-                    <h1 class="text-4xl font-black tracking-tighter text-white uppercase italic text-left">SAI STRATEGIC ANALYSIS</h1>
+                    <div class="w-4 h-4 bg-red-500 rounded-full animate-ping shadow-[0_0_15px_rgba(239,68,68,0.8)] text-left"></div>
+                    <h1 class="text-4xl font-black tracking-tighter text-white uppercase italic">SAI STRATEGIC ANALYSIS</h1>
                 </div>
-                <p class="text-slate-400 text-xs font-bold tracking-widest uppercase opacity-80 font-mono">Deterministic Matrix v3.9.8 // Global Monitor</p>
+                <p class="text-red-400 text-xs font-bold tracking-widest uppercase opacity-80 font-mono">Deterministic Matrix v3.9.9 // THRESHOLD BREACHED</p>
             </div>
-            <div class="glass-card p-5 rounded-2xl text-left font-mono border-cyan-500/30">
+            <div class="glass-card p-5 rounded-2xl text-left font-mono border-red-500/30">
                 <p class="text-xs text-slate-500 font-bold uppercase mb-2 italic text-right">Data Correct As Of (IST)</p>
-                <p class="text-2xl text-cyan-400 font-black tracking-tighter">FEB 27, 2026 // 21:15</p>
+                <p class="text-2xl text-red-400 font-black tracking-tighter">FEB 27, 2026 // 22:15</p>
             </div>
         </div>
+
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-            <div class="lg:col-span-5 glass-card rounded-[3rem] p-12 flex flex-col items-center justify-center shadow-2xl relative pulse-warning">
+            <div class="lg:col-span-5 glass-card rounded-[3rem] p-12 flex flex-col items-center justify-center shadow-2xl relative pulse-critical">
                 <div class="relative w-72 h-44">
                     <svg viewBox="0 0 120 75" class="w-full h-full">
                         <defs>
                             <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" style="stop-color:#38bdf8" />
-                                <stop offset="100%" style="stop-color:#f59e0b" />
+                                <stop offset="0%" style="stop-color:#f87171" />
+                                <stop offset="100%" style="stop-color:#ef4444" />
                             </linearGradient>
                         </defs>
                         <path fill="none" stroke="#334155" stroke-width="10" stroke-linecap="round" d="M10 65 A 50 50 0 0 1 110 65" />
                         <path class="gauge-fill" d="M10 65 A 50 50 0 0 1 110 65" />
                     </svg>
                     <div class="absolute inset-0 flex flex-col items-center justify-end pb-4 text-center">
-                        <span class="text-7xl font-black text-white tracking-tighter">54.6%</span>
+                        <span class="text-7xl font-black text-white tracking-tighter">55.1%</span>
                         <span class="text-xs font-bold text-slate-400 uppercase tracking-[0.4em] mt-2">SAI Probability Index</span>
                     </div>
                 </div>
-                <div class="mt-10 flex items-center gap-4 bg-amber-500/10 border-2 border-amber-500/20 px-8 py-3 rounded-full">
-                    <i data-lucide="activity" class="text-amber-500 w-5 h-5"></i>
-                    <span class="text-sm font-black text-amber-500 uppercase tracking-widest leading-none text-right">ירידה קלה במתח האזרחי</span>
+                <div class="mt-10 flex items-center gap-4 bg-red-500/20 border-2 border-red-500/40 px-8 py-3 rounded-full">
+                    <i data-lucide="alert-octagon" class="text-red-500 w-5 h-5"></i>
+                    <span class="text-sm font-black text-red-500 uppercase tracking-widest leading-none text-right">חציית רף התראה דחופה</span>
                 </div>
             </div>
-            <div class="lg:col-span-7 space-y-6">
+
+            <div class="lg:col-span-7 space-y-6 text-right">
                 <div class="glass-card p-6 rounded-2xl">
                     <div class="flex justify-between items-center mb-3 font-mono">
-                        <span class="text-sm font-black text-slate-200 uppercase tracking-wider text-right">Logistics & Deployment // לוגיסטיקה</span>
-                        <span class="text-lg font-bold text-blue-400">4.5 / 5.0</span>
+                        <span class="text-sm font-black text-slate-200 uppercase tracking-wider">Logistics & Deployment</span>
+                        <span class="text-lg font-bold text-blue-400">4.6 / 5.0</span>
                     </div>
                     <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
-                        <div class="bg-blue-500 h-full rounded-full transition-all duration-1000" style="width: 90%"></div>
+                        <div class="bg-blue-500 h-full" style="width: 92%"></div>
                     </div>
                 </div>
                 <div class="glass-card p-6 rounded-2xl">
                     <div class="flex justify-between items-center mb-3 font-mono">
-                        <span class="text-sm font-black text-slate-200 uppercase tracking-wider text-right">Hostile Intent & Comms // כוונה</span>
-                        <span class="text-lg font-bold text-amber-400">4.1 / 5.0</span>
+                        <span class="text-sm font-black text-slate-200 uppercase tracking-wider">Hostile Intent & Comms</span>
+                        <span class="text-lg font-bold text-amber-400">4.2 / 5.0</span>
                     </div>
                     <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
-                        <div class="bg-amber-500 h-full rounded-full transition-all duration-1000" style="width: 82%"></div>
+                        <div class="bg-amber-500 h-full" style="width: 84%"></div>
                     </div>
                 </div>
-                <div class="glass-card p-6 rounded-2xl">
+                <div class="bg-red-500/10 border border-red-500/30 p-6 rounded-2xl">
                     <div class="flex justify-between items-center mb-3 font-mono">
-                        <span class="text-sm font-black text-slate-200 uppercase tracking-wider text-right">Civilian Infrastructure // תשתית</span>
-                        <span class="text-lg font-bold text-cyan-400">1.2 / 5.0</span>
+                        <span class="text-sm font-black text-red-400 uppercase tracking-wider">Civilian Brakes // בולמים</span>
+                        <span class="text-lg font-bold text-red-400">-0.4 Margin</span>
                     </div>
                     <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
-                        <div class="bg-cyan-400 h-full rounded-full transition-all duration-1000" style="width: 24%"></div>
+                        <div class="bg-red-500 h-full" style="width: 40%"></div>
                     </div>
-                </div>
-                <div class="bg-emerald-500/10 border border-emerald-500/30 p-6 rounded-2xl">
-                    <div class="flex justify-between items-center mb-3 font-mono">
-                        <span class="text-sm font-black text-emerald-400 uppercase tracking-wider text-right">Stabilizing Brakes // בולמים</span>
-                        <span class="text-lg font-bold text-emerald-400">-0.9 Margin</span>
-                    </div>
-                    <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
-                        <div class="bg-emerald-500 h-full rounded-full transition-all duration-1000" style="width: 18%"></div>
-                    </div>
-                    <p class="text-xs text-emerald-400/80 mt-3 font-bold italic text-right">GPS Signal in Netanya: 100% NOMINAL. No Local Disruption.</p>
+                    <p class="text-xs text-red-400/80 mt-3 font-bold italic text-right">דיווחים על שיבושי GPS בצפון הארץ. נתניה עדיין תקינה.</p>
                 </div>
             </div>
         </div>
-        <div class="glass-card p-10 rounded-[3rem] border-r-8 border-cyan-500">
-            <h3 class="text-xs font-black text-cyan-400 uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
-                <i data-lucide="message-square" class="w-5 h-5"></i> Analyst Briefing // 21:15
+
+        <div class="glass-card p-10 rounded-[3rem] border-r-8 border-red-500">
+            <h3 class="text-xs font-black text-red-400 uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
+                <i data-lucide="shield-alert" class="w-5 h-5"></i> Critical Briefing // 22:15
             </h3>
             <p class="text-slate-200 leading-relaxed text-right text-xl font-medium italic">
-                המדד רשם ירידה קלה ל-<strong>54.6%</strong>. הסיבה המרכזית היא תחילת תהליכי ה-Boarding של טיסת יונייטד (UA85) ללא שינוי בלו"ז, מה שמעיד על הערכת סיכונים אמריקאית יציבה למרחב האווירי. <strong>ה-GPS בנתניה נותר תקין ב-100%</strong>, נתון המהווה בולם משמעותי בשלב זה של הלילה.
+                המדד חצה את רף ה-55% ועומד על <strong>55.1%</strong>. העלייה נובעת משיבושי GPS ראשונים שזוהו באזור חיפה והצפון, יחד עם התרוקנות נתיבי טיסה אזרחיים מעל עיראק. <strong>ה-GPS בנתניה עדיין תקין ב-100%</strong>, אך המערכת נמצאת בנקודת המפנה הקריטית ביותר של הערב.
             </p>
         </div>
+
         <div class="bg-white text-slate-950 p-10 rounded-[2.5rem] shadow-2xl" dir="ltr">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-xs font-bold uppercase tracking-tight leading-relaxed text-left">
                 <div class="space-y-4">
                     <h4 class="text-sm font-black italic border-b-2 border-black pb-2">LEGAL LIABILITY & TERMS</h4>
-                    <p>This dashboard provides conceptual data analysis only. Use of this information is at the SOLE RISK OF THE USER. The operators assume ZERO LEGAL LIABILITY.</p>
+                    <p>USER'S SOLE RISK. NO LEGAL LIABILITY ASSUMED.</p>
                 </div>
-                <div class="space-y-4">
+                <div class="space-y-4 text-left">
                     <h4 class="text-sm font-black italic border-b-2 border-black pb-2">EMERGENCY PROTOCOL</h4>
-                    <p>FOLLOW ONLY HOME FRONT COMMAND INSTRUCTIONS. Do not rely on this probability index for life-critical decisions.</p>
+                    <p class="bg-yellow-200 px-1 text-red-600 font-black">FOLLOW ONLY HOME FRONT COMMAND INSTRUCTIONS.</p>
                 </div>
             </div>
         </div>
