@@ -9,7 +9,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap');
         body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
-        .gauge-fill { fill: none; stroke: url(#gaugeGradient); stroke-width: 10; stroke-linecap: round; stroke-dasharray: 314; stroke-dashoffset: calc(314 - (314 * 51.2) / 100); transition: stroke-dashoffset 1.5s ease-out; }
+        .gauge-fill { fill: none; stroke: url(#gaugeGradient); stroke-width: 10; stroke-linecap: round; stroke-dasharray: 314; stroke-dashoffset: calc(314 - (314 * 53.3) / 100); transition: stroke-dashoffset 1.5s ease-out; }
     </style>
 </head>
 <body class="text-slate-200 min-h-screen p-4 md:p-8">
@@ -18,21 +18,20 @@
         <div class="flex flex-col md:flex-row justify-between items-center bg-slate-900/40 backdrop-blur-md p-6 rounded-3xl border border-white/5 gap-4">
             <div class="text-right">
                 <div class="flex items-center gap-2 mb-1 justify-end">
-                    <div class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                    <div class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
                     <h1 class="text-2xl font-black tracking-tight text-white uppercase italic">SAI STRATEGIC</h1>
                 </div>
-                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest opacity-60">Deterministic Matrix v3.9</p>
+                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest opacity-60">Deterministic Matrix v3.9.1</p>
             </div>
             <div class="text-center md:text-left">
-                <p class="text-[10px] text-slate-500 font-bold uppercase mb-1">Last Data Sync (15:00 IST)</p>
-                <p class="text-lg text-cyan-400 font-mono font-bold tracking-tighter">FEB 27, 2026 // 15:00</p>
+                <p class="text-[10px] text-slate-500 font-bold uppercase mb-1">Last Data Sync (16:15 IST)</p>
+                <p class="text-lg text-cyan-400 font-mono font-bold tracking-tighter">FEB 27, 2026 // 16:15</p>
             </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
             
             <div class="lg:col-span-5 bg-white/5 rounded-[2.5rem] p-8 border border-white/10 flex flex-col items-center justify-center relative overflow-hidden shadow-2xl">
-                <div class="absolute -top-24 -left-24 w-64 h-64 bg-blue-500/10 blur-[100px] rounded-full"></div>
                 <div class="relative w-64 h-40">
                     <svg viewBox="0 0 120 75" class="w-full h-full">
                         <defs>
@@ -41,103 +40,74 @@
                                 <stop offset="100%" style="stop-color:#fbbf24" />
                             </linearGradient>
                         </defs>
-                        <path class="gauge-bg" fill="none" stroke="#334155" stroke-width="10" stroke-linecap="round" d="M10 65 A 50 50 0 0 1 110 65" />
+                        <path fill="none" stroke="#334155" stroke-width="10" stroke-linecap="round" d="M10 65 A 50 50 0 0 1 110 65" />
                         <path class="gauge-fill" d="M10 65 A 50 50 0 0 1 110 65" />
                     </svg>
                     <div class="absolute inset-0 flex flex-col items-center justify-end pb-4">
-                        <span class="text-6xl font-black text-white tracking-tighter">51.2%</span>
+                        <span class="text-6xl font-black text-white tracking-tighter">53.3%</span>
                         <span class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.4em] mt-1">SAI Index</span>
                     </div>
                 </div>
                 <div class="mt-4 flex items-center gap-3 bg-white/5 px-6 py-2 rounded-full border border-white/10">
-                    <i data-lucide="trending-up" class="text-amber-400 w-4 h-4"></i>
-                    <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Elevated Risk Window</span>
+                    <i data-lucide="activity" class="text-amber-400 w-4 h-4"></i>
+                    <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Increased Intelligence Flow</span>
                 </div>
             </div>
 
             <div class="lg:col-span-7 grid grid-cols-1 gap-4">
-                
                 <div class="bg-white/5 p-5 rounded-2xl border border-white/5">
                     <div class="flex justify-between items-center mb-2">
-                        <div class="flex items-center gap-3">
-                            <div class="p-2 bg-blue-500/10 rounded-lg"><i data-lucide="anchor" class="text-blue-400 w-4 h-4"></i></div>
-                            <span class="text-xs font-bold text-slate-300 uppercase tracking-wider">Logistics & Deployment (40%)</span>
-                        </div>
-                        <span class="text-sm font-mono font-bold text-blue-400">4.2 / 5.0</span>
+                        <span class="text-xs font-bold text-slate-300 uppercase">Logistics & Deployment (40%)</span>
+                        <span class="text-sm font-mono font-bold text-blue-400">4.4 / 5.0</span>
                     </div>
                     <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
-                        <div class="bg-blue-500 h-full rounded-full transition-all duration-1000" style="width: 84%"></div>
+                        <div class="bg-blue-500 h-full rounded-full" style="width: 88%"></div>
                     </div>
+                    <p class="text-[9px] text-slate-500 mt-2 italic">Increased tanker activity & movement of engineering equipment near launch sites.</p>
                 </div>
 
                 <div class="bg-white/5 p-5 rounded-2xl border border-white/5">
                     <div class="flex justify-between items-center mb-2">
-                        <div class="flex items-center gap-3">
-                            <div class="p-2 bg-amber-500/10 rounded-lg"><i data-lucide="zap" class="text-amber-400 w-4 h-4"></i></div>
-                            <span class="text-xs font-bold text-slate-300 uppercase tracking-wider">Hostile Intent (30%)</span>
-                        </div>
-                        <span class="text-sm font-mono font-bold text-amber-400">3.5 / 5.0</span>
+                        <span class="text-xs font-bold text-slate-300 uppercase">Hostile Intent (30%)</span>
+                        <span class="text-sm font-mono font-bold text-amber-400">3.9 / 5.0</span>
                     </div>
                     <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
-                        <div class="bg-amber-500 h-full rounded-full transition-all duration-1000" style="width: 70%"></div>
+                        <div class="bg-amber-500 h-full rounded-full" style="width: 78%"></div>
                     </div>
+                    <p class="text-[9px] text-slate-500 mt-2 italic">Spike in encrypted comms volume (C1) + Satellite orbital adjustments (C6).</p>
                 </div>
 
-                <div class="bg-white/5 p-5 rounded-2xl border border-white/5">
+                <div class="bg-cyan-500/5 p-5 rounded-2xl border border-cyan-500/20">
                     <div class="flex justify-between items-center mb-2">
-                        <div class="flex items-center gap-3">
-                            <div class="p-2 bg-emerald-500/10 rounded-lg"><i data-lucide="shield" class="text-emerald-400 w-4 h-4"></i></div>
-                            <span class="text-xs font-bold text-slate-300 uppercase tracking-wider">Civilian Infrastructure (30%)</span>
-                        </div>
-                        <span class="text-sm font-mono font-bold text-emerald-400">1.0 / 5.0</span>
+                        <span class="text-xs font-bold text-cyan-400 uppercase">Brakes & Stabilizers (C14/C19)</span>
+                        <span class="text-sm font-mono font-bold text-cyan-400">-0.7 Margin</span>
                     </div>
                     <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
-                        <div class="bg-emerald-500 h-full rounded-full transition-all duration-1000" style="width: 20%"></div>
+                        <div class="bg-cyan-400 h-full rounded-full" style="width: 25%"></div>
                     </div>
-                </div>
-
-                <div class="bg-cyan-500/5 p-5 rounded-2xl border border-cyan-500/20 relative">
-                    <div class="flex justify-between items-center mb-2">
-                        <div class="flex items-center gap-3">
-                            <div class="p-2 bg-cyan-500/20 rounded-lg"><i data-lucide="octagon-pause" class="text-cyan-400 w-4 h-4"></i></div>
-                            <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider">Brakes & Stabilizers (Negative Weight)</span>
-                        </div>
-                        <span class="text-sm font-mono font-bold text-cyan-400">-0.6 Contribution</span>
-                    </div>
-                    <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
-                        <div class="bg-cyan-400 h-full rounded-full" style="width: 15%"></div>
-                    </div>
-                    <p class="text-[9px] text-cyan-400/60 mt-2 italic leading-none text-right">US Flight schedule (UA/DL) acts as a primary civilian shield.</p>
+                    <p class="text-[9px] text-cyan-400/60 mt-2 italic text-right">GPS Signal in Netanya remains 100% nominal. Flight schedules stable.</p>
                 </div>
             </div>
         </div>
 
         <div class="bg-slate-900/60 p-8 rounded-[2rem] border border-white/5 relative">
             <h3 class="text-[10px] font-black text-cyan-400 uppercase tracking-[0.3em] mb-4 flex items-center gap-2">
-                <i data-lucide="info" class="w-4 h-4"></i> Strategic Insight
+                <i data-lucide="shield" class="w-4 h-4"></i> Strategic Insight // 16:15
             </h3>
             <p class="text-slate-300 leading-relaxed text-right text-lg italic">
-                הציון <strong>51.2%</strong> משקף קונפליקט בין וקטורים: הלוגיסטיקה והכוונה דוחפים למעלה (בשל עזיבת הכוחות הרוסים והגבלות השגרירות), אך הבלמים (Brakes) והתשתית האזרחית התקינה בנתניה ובנתב"ג מונעים הסלמה. כל עוד ה-GPS תקין, המערכת בשגרה דרוכה.
+                הציון עודכן ל-<strong>53.3%</strong> בשל זיהוי עלייה בנפח המסרים המוצפנים (C1) ותנועת ציוד הנדסי כבד בקרבת אתרי שיגור (C13). למרות הרעש הלווייני והתקשורתי, <strong>הבלמים האזרחיים עדיין פועלים:</strong> ה-GPS במרכז הארץ תקין ב-100% וטיסות יונייטד/דלתא עדיין בלו"ז. אנחנו מתקרבים לרף ה-55% אך טרם חצינו אותו.
             </p>
         </div>
 
         <div class="bg-white text-slate-950 p-8 rounded-3xl" dir="ltr">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                <div class="space-y-4">
-                    <h4 class="text-sm font-black uppercase tracking-tighter flex items-center gap-2">
-                        <i data-lucide="alert-circle" class="w-5 h-5"></i> IMPORTANT LEGAL NOTICE
-                    </h4>
-                    <p class="text-xs font-bold leading-relaxed opacity-90">
-                        This dashboard is a conceptual analytical tool powered by AI-modeling of open-source data. It is NOT an official security alert and does NOT provide real-time guarantees of safety.
-                    </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start text-xs">
+                <div class="space-y-2">
+                    <h4 class="font-black uppercase tracking-tighter italic">Official Notice</h4>
+                    <p class="font-bold opacity-90 leading-relaxed">Conceptual AI-driven analytical dashboard. Not an official security warning.</p>
                 </div>
-                <div class="space-y-4">
-                    <p class="text-xs leading-relaxed font-bold">
-                        USERS SHOULD RELY SOLELY ON OFFICIAL INSTRUCTIONS FROM THE HOME FRONT COMMAND (PIKUD HAOREF) OR GOVERNMENTAL EMERGENCY SERVICES. DO NOT USE THIS SCORE FOR LIFE-CRITICAL DECISIONS.
-                    </p>
-                    <div class="pt-4 border-t border-slate-950/20">
-                        <p class="text-[9px] font-black uppercase tracking-widest opacity-60">SAI Matrix v3.9 // Deterministic Data Only</p>
-                    </div>
+                <div class="space-y-2 font-bold leading-relaxed">
+                    <p>RELY SOLELY ON OFFICIAL HOME FRONT COMMAND (PIKUD HAOREF) INSTRUCTIONS. DO NOT USE FOR LIFE-SAFETY DECISIONS.</p>
+                    <p class="opacity-40 text-[9px] uppercase tracking-widest pt-2 border-t border-black/10">SAI Matrix v3.9.1 // Deterministic Ground Intel</p>
                 </div>
             </div>
         </div>
